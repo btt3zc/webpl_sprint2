@@ -32,7 +32,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	color: #073b4c !important
+	color: #073b4c !important;
+
 }
 ol, ul {
 	list-style: none;
@@ -46,8 +47,7 @@ q:before, q:after {
 	content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+	border:1px solid black;
 }
 
 nav {
@@ -60,6 +60,16 @@ a {
 	flex: 35%; 
 	text-align: center;
 }
+button {
+	background-color: blue; /* Green */
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+  }
 
 select {
     width: 200px;
@@ -67,3 +77,9 @@ select {
     padding: 12px;
 }
 
+input[type=text] {
+	width: 10cm;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+}
