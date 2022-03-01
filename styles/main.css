@@ -91,3 +91,8 @@ img{
     height: 60px;
     width: 60px;
  }
+
+ input:focus {
+	color: red;
+	outline: none;
+  }
