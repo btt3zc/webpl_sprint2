@@ -49,11 +49,27 @@ q:before, q:after {
 table {
 	border:1px solid black;
 }
-
+.grid {
+	max-width: 1000px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 100px 100px;
+	grid-gap: 70px;
+	grid-auto-columns: minmax(150px, auto);
+	grid-auto-flow: row; /* change this to row instead of column*/
+  }
 /* our rules start here */
 nav {
     list-style-type: none;
     margin: 10px;
+    padding: 10px;
+}
+footer {
+	position: absolute;
+  	bottom: 0;
+  	width: 100%;
+  	height: 2.5rem;
+	margin: 10px;
     padding: 10px;
 }
 
@@ -86,15 +102,10 @@ input[type=text] {
 	box-sizing: border-box;
 }
 
-img{
-	position: absolute;
-    right: 0;
-    top: 0;
-    display: block;
-    height: 60px;
-    width: 60px;
- }
 
+<<<<<<< HEAD
+
+=======
 @media only screen and (max-width: 768px) {
 	/* For mobile phones and tablets: */
 	select {
@@ -110,6 +121,7 @@ img{
         box-sizing: border-box;
     }
 }
+>>>>>>> 3fc8c33d378c804dd112f336b7c114436cd3933f
 
 button:hover {
 	color: greenyellow;
