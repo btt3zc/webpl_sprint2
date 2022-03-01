@@ -32,6 +32,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	color: #073b4c !important
 }
 ol, ul {
 	list-style: none;
@@ -53,5 +54,10 @@ nav {
     list-style-type: none;
     margin: 10px;
     padding: 10px;
+}
+
+a {
+	flex: 35%; 
+	text-align: center;
 }
 
