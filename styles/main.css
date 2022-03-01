@@ -50,6 +50,7 @@ table {
 	border:1px solid black;
 }
 
+/* our rules start here */
 nav {
     list-style-type: none;
     margin: 10px;
@@ -83,3 +84,20 @@ input[type=text] {
 	margin: 8px 0;
 	box-sizing: border-box;
 }
+
+@media only screen and (min-width: 768px) {
+	.grid-cont{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .grid-item{
+        display: -ms-inline-grid;
+        text-align: center;
+        padding: 20px;
+    }
+}  
+    
+
