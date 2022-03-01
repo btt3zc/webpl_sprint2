@@ -96,3 +96,7 @@ img{
 	color: red;
 	outline: none;
   }
+
+  button:hover {
+	color: greenyellow;
+  }
