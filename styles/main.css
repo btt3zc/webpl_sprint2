@@ -32,7 +32,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	color: #073b4c !important
+	color: #073b4c !important;
 
 }
 ol, ul {
@@ -47,8 +47,7 @@ q:before, q:after {
 	content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+	border:1px solid black;
 }
 
 nav {
@@ -72,3 +71,9 @@ button {
 	font-size: 16px;
   }
 
+  input[type=text] {
+	width: 10cm;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+  }
