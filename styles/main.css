@@ -85,19 +85,18 @@ input[type=text] {
 	box-sizing: border-box;
 }
 
-@media only screen and (min-width: 768px) {
-	.grid-cont{
-        display: grid;
-        grid-template-columns: auto auto auto;
-        gap: 20px;
-        padding: 20px;
-    }
-    
-    .grid-item{
-        display: -ms-inline-grid;
-        text-align: center;
-        padding: 20px;
-    }
-}  
-    
+img{
+	position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    height: 60px;
+    width: 60px;
+ }
 
+@media only screen and (min-width: 768px) {
+
+}  
+
+
+    
