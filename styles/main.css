@@ -123,3 +123,10 @@ input[type=text] {
 button:hover {
 	color: greenyellow;
 }
+
+a:visited {
+	background-color: lightblue;
+	border-color: hotpink;
+	color: hotpink;
+  }
+  
