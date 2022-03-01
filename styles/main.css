@@ -83,3 +83,11 @@ input[type=text] {
 	margin: 8px 0;
 	box-sizing: border-box;
 }
+img{
+	position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    height: 60px;
+    width: 60px;
+ }
