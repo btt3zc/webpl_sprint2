@@ -50,6 +50,7 @@ table {
 	border:1px solid black;
 }
 
+/* our rules start here */
 nav {
     list-style-type: none;
     margin: 10px;
@@ -83,6 +84,7 @@ input[type=text] {
 	margin: 8px 0;
 	box-sizing: border-box;
 }
+
 img{
 	position: absolute;
     right: 0;

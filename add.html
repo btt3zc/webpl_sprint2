@@ -21,43 +21,71 @@
         <a href="mygames.html">My Games</a>
     </nav>
 	
-    <div class="column" style="flex: 35%; text-align: left;">
+    <div>
 
         <form method="POST" action="home.html">
-			<input type="text" name="gameID"> Game_ID <br>
-			<input type="text" name="time_increment"> Time Increment (ex: 15+10) <br>
+			<div>
+				<input type="text" name="gameID"> Game_ID <br>
+			</div>
 
-			<input type="text" name="opening_name"> Opening Name <br>
-			<input type="text" name="opening_eco"> Opening Eco (ex: d00) <br>
+			<div>
+				<input type="text" name="time_increment"> Time Increment (ex: 15+10) <br>
+			</div>
 
-			<input type="text" name="black_ID"> Black ID <br>
-			<input type="text" name="black_rating"> Black Rating <br>
+			<div>
+				<input type="text" name="opening_name"> Opening Name <br>
+			</div>
 
-			<input type="text" name="white_ID"> White ID <br>
-			<input type="text" name="white_rating"> White Rating <br>
+			<div>
+				<input type="text" name="opening_eco"> Opening Eco (ex: d00) <br>
+			</div>
 
-			<input type="text" name="move_list"> Move List (ex: d1 c4 a0...) <br>
+			<div>
+				<input type="text" name="black_ID"> Black ID <br>
+			</div>
 
-			<input type="text" name="Number_of_Turns"> Number of Turns <br>
+			<div>
+				<input type="text" name="black_rating"> Black Rating <br>
+			</div>
 
-			<input type="text" name="StartTime"> Start Time <br>
+			<div>
+				<input type="text" name="white_ID"> White ID <br>
+			</div>
 
-			<input type="text" name="EndTime"> End Time <br>
+			<div>
+				<input type="text" name="white_rating"> White Rating <br>
+			</div>
+
+			<div>
+				<input type="text" name="move_list"> Move List (ex: d1 c4 a0...) <br>
+			</div>
+
+			<div>
+				<input type="text" name="Number_of_Turns"> Number of Turns <br>
+			</div>>
+
+			<div>
+				<input type="text" name="StartTime"> Start Time <br>
+			</div>
 			
-			<select name="Winner" id="Winner">
+			<div>
+				<input type="text" name="EndTime"> End Time <br>
+			</div>
+			
+			<select class = "dynamicAlign" name="Winner" id="Winner">
 				<option value="white">White</option>
 				<option value="black">Black</option>
 				<option value="draw">Draw</option>
 			</select> Winner <br>
 
-			<select name="VictoryStatus" id="VictoryStatus">
+			<select class = "dynamicAlign" name="VictoryStatus" id="VictoryStatus">
 				<option value="mate">Checkmate</option>
 				<option value="resign">Resign</option>
 				<option value="outoftime">Out of Time</option>
 				<option value="draw">Draw</option>
 			</select> Victory Status <br>
 
-			<select name="rated" id="rated">
+			<select class="dynamicAlign" name="rated" id="rated">
 				<option value="1">Rated</option>
 				<option value="0">Unrated</option>
 			</select> Rated <br>
