@@ -124,3 +124,10 @@ button:hover {
 	grid-auto-columns: minmax(150px, auto);
 	grid-auto-flow: row; /* change this to row instead of column*/
   }
+  
+a:visited {
+	background-color: lightblue;
+	border-color: hotpink;
+	color: hotpink;
+  }
+  
