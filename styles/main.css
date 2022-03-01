@@ -61,6 +61,7 @@ a {
 	flex: 35%; 
 	text-align: center;
 }
+
 button {
 	background-color: blue; /* Green */
 	border: none;
@@ -94,7 +95,18 @@ img{
     width: 60px;
  }
 
- input:focus {
-	color: red;
-	outline: none;
-  }
+@media only screen and (max-width: 768px) {
+	/* For mobile phones and tablets: */
+	select {
+        width: 300px;
+        margin: 50px;
+        padding: 8px;
+    }
+    
+    input[type=text] {
+        width: 300px;
+        padding: 10px;
+        margin: 50px;
+        box-sizing: border-box;
+    }
+}
