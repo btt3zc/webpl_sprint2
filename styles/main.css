@@ -102,10 +102,6 @@ input[type=text] {
 	box-sizing: border-box;
 }
 
-
-<<<<<<< HEAD
-
-=======
 @media only screen and (max-width: 768px) {
 	/* For mobile phones and tablets: */
 	select {
@@ -121,7 +117,6 @@ input[type=text] {
         box-sizing: border-box;
     }
 }
->>>>>>> 3fc8c33d378c804dd112f336b7c114436cd3933f
 
 button:hover {
 	color: greenyellow;
