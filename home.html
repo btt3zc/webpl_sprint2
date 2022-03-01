@@ -12,7 +12,7 @@
 </head>
 
 <body class="bg-light" >
-
+    
     <nav>
         <a href="home.html">Home</a>
         <a href="search.html">Search</a>
@@ -22,21 +22,26 @@
     </nav>
     <img src="login.jpeg" alt="login">
     <div>
-        <a class="column">
-            <a href="search.html" class="list-group-item list-group-item-primary">Search Games </a>
-        </ul>
-           
+        <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/:checked -->
+        <div>
+            <input type="checkbox" name="my-checkbox" id="chess-style">
+            <label for="chess-style">
+                <div class="switchblack">
+                    <a href="search.html"> Search Games </a>
+                </div>            
+            </label>        
+        </div>      
 
-        <div class="column" >
-            <a href="add.html" class="list-group-item list-group-item-secondary">Add Game </a>
+        <div class="white" >
+            <a href="add.html">Add Game </a>
         </div>
 
-        <div class="column" >
-            <a href="delete.html" class="list-group-item list-group-item-danger">Delete Game </a>
+        <div class="switchblack" >
+            <a href="delete.html">Delete Game </a>
         </div>
 
-        <div class="column" >
-            <a href="mygames.html" class="list-group-item list-group-item-warning">My Games</a>
+        <div class="white" >
+            <a href="mygames.html">My Games</a>
         </div>
     </div>
 

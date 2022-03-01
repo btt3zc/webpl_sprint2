@@ -114,3 +114,25 @@ img{
 button:hover {
 	color: greenyellow;
 }
+
+.switchblack {
+    margin: 50px;
+    padding: 20px;
+	background-color:white;
+	text-align: center;
+}
+
+.white {
+    margin: 50px;
+    padding: 20px;
+	background-color:white;
+	text-align: center;
+}
+
+.chess-style:checked {
+	box-shadow: 0 0 0 3px hotpink;
+	margin: 50px;
+    padding: 20px;
+	background-color:black;
+	text-align: center;
+}
