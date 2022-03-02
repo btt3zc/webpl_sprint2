@@ -1,0 +1,4 @@
+Anurag Vathalurin (asv9mn), Huy Huynh(hth5cf)
+
+We had troubling setting up the forms on add and delete.html. 
+They helped walk us through how to use the labels and IDS on the forms.
