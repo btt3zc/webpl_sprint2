@@ -96,7 +96,7 @@ input[type=text] {
 	margin: 8px 0;
 	box-sizing: border-box;
 }
-
+/* rule for different screen  */
 @media only screen and (max-width: 768px) {
 	/* For mobile phones and tablets: */
 	select {
@@ -112,7 +112,7 @@ input[type=text] {
         box-sizing: border-box;
     }
 }
-
+/* pseudo class for button hovering*/
 button:hover {
 	color: greenyellow;
 }
@@ -126,6 +126,7 @@ button:hover {
 	grid-auto-columns: minmax(150px, auto);
 	grid-auto-flow: row; /* change this to row instead of column*/
   }
+/* pseudo class for visited */
 
 a:visited {
 	background-color: lightblue;
