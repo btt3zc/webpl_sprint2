@@ -11,7 +11,7 @@ class ChessController {
 
     public function run() {
         switch($this->command) {
-            case "question":
+            case "chess":
                 // $this->resetVariables();
                 $this->chess();
                 break;
@@ -28,6 +28,9 @@ class ChessController {
             default:
                 $this->login();
                 break;
+            case "add": 
+                $this->add(); 
+                break; 
         }
     }
 
@@ -68,7 +71,7 @@ private function login() {
                 $_SESSION["email"] = $_POST["email"]; 
                 $_SESSION["name"] = $_POST["name"]; 
                 $_SESSION["password"] = $_POST["password"];
-                header("Location: ?command=question");
+                header("Location: ?command=chess");
             } else {
                 $error_msg = "Wrong password";
             }
@@ -86,7 +89,7 @@ private function login() {
                 $_SESSION["email"] = $_POST["email"]; 
                 $_SESSION["name"] = $_POST["name"]; 
                 $_SESSION["password"] = $_POST["password"];
-                header("Location: ?command=question");
+                header("Location: ?command=chess");
             }
         }
     }
@@ -220,10 +223,50 @@ private function login() {
     public function chess(){
 
         include("templates/chess.php");
+
     }
+
+
+    public function add(){
+        $this->db->query("
+        CREATE TABLE IF NOT EXISTS chess_games(
+            id varchar(64) not null,
+            Time_increment text not null, 
+            opening_name text not null, 
+            opening_eco text not null, 
+            black_id text not null, 
+            black_rating text not null, 
+            white_id text not null, 
+            white_rating text not null, 
+            move_list text not null, 
+            turn_number text not null, 
+            start_time text not null, 
+            end_time text not null,
+            winner text not null, 
+            victory_status text not null, 
+            rated text not null, 
+            primary key(id)); ");
+
+            if (isset($_POST["gameID"])) {
+                $insert = $this->db->query("insert into chess_games(id,Time_increment,opening_name,opening_eco,black_id,black_rating,white_id,white_rating,move_list,turn_number,start_time,end_time,winner,victory_status,rated) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);", 
+                            "sssssssssssssss", $_POST["gameID"],$_POST["time_increment"],$_POST["opening_name"],$_POST["opening_eco"], $_POST["black_ID"], $_POST["black_rating"],$_POST["white_ID"], $_POST["white_rating"],$_POST["move_list"], $_POST["Number_of_Turns"], $_POST["StartTime"], $_POST["EndTime"],$_POST["Winner"], $_POST["VictoryStatus"],$_POST["rated"] 
+                            );
+                if ($insert === false) {
+                    $error_msg = "Error inserting user";
+                } else {
+                    header("Location: ?command=add");
+                }
+                
+            } else {
+                $error_msg = "Game_ID must be set";
+            } 
+            include("templates/add.php");
+    }
+
+
+
+
     public function gameover() {
-
-
        // echo $name; 
         $name = $_SESSION["name"]; 
         //echo $name; 

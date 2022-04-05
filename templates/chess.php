@@ -1,4 +1,4 @@
-<!-- {% include "nav.html" %} -->
+
 <!-- https://cs4640.cs.virginia.edu/jmn8gf/sprint2/ -->
 <!DOCTYPE html>
 <html lang="en">
@@ -15,12 +15,12 @@
 </head>
 
 <body class="bg-light" >
-    
+    <form action="?command=question" method="post">
     <!-- nav bar -->
     <nav class="nav-custom">
         <a href="index.html">Home</a>
         <a href="search.html">Search</a>
-        <a href="add.html">Add</a>
+        <a href="?command=add">Add</a>
         <a href="delete.html">Delete</a>
         <a href="mygames.html">My Games</a>
     </nav>
@@ -39,7 +39,7 @@
            
 
         <div class="column" >
-            <a href="add.html" class="list-group-item list-group-item-secondary">Add Game </a>
+            <a href="?command=add" class="list-group-item list-group-item-secondary">Add Game </a>
         </div>
 
         <div class="column" >
@@ -73,10 +73,11 @@
     <footer>
         <a href="index.html">Home</a>
         <a href="search.html">Search</a>
-        <a href="add.html">Add</a>
+        <a href="?command=add">Add</a>
         <a href="delete.html">Delete</a>
         <a href="mygames.html">My Games</a>
     </footer>
 
 </body>
+</form>
 </html>
