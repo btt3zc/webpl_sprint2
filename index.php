@@ -20,5 +20,5 @@ if (!isset($_SESSION["email"])) {
 }
 
 // Instantiate the controller and run
-$trivia = new FinanceController($command); 
+$trivia = new ChessController($command); 
 $trivia->run();
