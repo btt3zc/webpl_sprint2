@@ -72,6 +72,7 @@
         <a href="?command=add">Add</a>
         <a href="delete.html">Delete</a>
         <a href="mygames.html">My Games</a>
+        
     </footer>
 
 </body>
