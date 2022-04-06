@@ -24,7 +24,9 @@
         <a href="?command=logout" class="btn btn-danger"  position:absolute; top:0; right:0; >logout</a>
     </nav>
      <!-- inline css rule  -->
+
     
+
     <!-- menu to other pages  -->
     <div>
         <a href="search.html" class="list-group-item list-group-item-primary">Search Games </a>
