@@ -274,6 +274,10 @@ private function login() {
         //echo $name; 
         $query = "select * from hw5_transaction1 where username ='$name' order by t_date desc;"; 
         $this->db->query($query);
+
+        $query_json = json_encode($this->db->query($query));
+        print($query_json);
+
         $_SESSION["history"]  = $this->db->query($query);
         include("templates/history.php");
     }
