@@ -62,7 +62,7 @@ private function login() {
         primary key(id)); "); 
 
     
-    if (isset($_POST["email"])) {
+    if (isset($_POST["email"]) && ($this->validateEmail($_POST["email"]) == TRUE)) {
         $data = $this->db->query("select * from user where email = ?;", "s", $_POST["email"]);
         if ($data === false) {
             $error_msg = "Error checking for user";
@@ -274,5 +274,15 @@ private function login() {
         $this->db->query($query);
         $_SESSION["history"]  = $this->db->query($query);
         include("templates/history.php");
+    }
+
+    public function validateEmail($email, $input_regex =  "/.*/") {
+        if(preg_match($input_regex, $email) and preg_match("/^[^.][A-Za-z0-9.\-\_\+]+[^.]@[A-Za-z0-9\.\-]+\.[A-Za-z\.\-]+/", $email) ){
+            return true; 
+        
+        } else {
+            return false;
+        }
+        return false; 
     }
 }

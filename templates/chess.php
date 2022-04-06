@@ -71,7 +71,7 @@
     </div>
     <!-- footer  -->
     <footer>
-        <a href="index.html">Home</a>
+        <a href="?command=chess">Home</a>
         <a href="search.html">Search</a>
         <a href="?command=add">Add</a>
         <a href="delete.html">Delete</a>
