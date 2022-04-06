@@ -93,8 +93,10 @@ private function login() {
             }
         }
     } else {
-        $error_msg = "invalid email"; 
-    }
+        if (isset($_POST["email"]) == TRUE && $this->validateEmail($_POST["email"]) == FALSE) {
+            $error_msg = "invalid email";
+        }
+    } 
     include("templates/login.php");
 }
 
