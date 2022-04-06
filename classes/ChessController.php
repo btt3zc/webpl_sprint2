@@ -33,7 +33,10 @@ class ChessController {
                 break; 
             case "delete":
                 $this->delete();
-                break; 
+                break;
+            case "mygames": 
+                $this->mygames(); 
+                break;  
         }
     }
 
@@ -102,10 +105,6 @@ private function login() {
     } 
     include("templates/login.php");
 }
-
-    public function transaction() {
-
-    }
 
     public function database() {
         $servername = "localhost";
@@ -283,21 +282,12 @@ private function login() {
         include("templates/delete.php");
     }
 
-
-
-
-    public function gameover() {
-       // echo $name; 
+    public function mygames(){
         $name = $_SESSION["name"]; 
-        //echo $name; 
-        $query = "select * from hw5_transaction1 where username ='$name' order by t_date desc;"; 
-        $this->db->query($query);
-
-        $query_json = json_encode($this->db->query($query));
-        print($query_json);
-
-        $_SESSION["history"]  = $this->db->query($query);
-        include("templates/history.php");
+        $query = "select * from chess_games where black_id ='$name' OR white_id = '$name' ";
+        $games =  $this->db->query($query); 
+        $_SESSION["mygames"] = $this->db->query($query);
+        include("templates/mygames.php");
     }
 
     public function validateEmail($email, $input_regex =  "/.*/") {
