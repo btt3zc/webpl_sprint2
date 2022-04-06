@@ -16,7 +16,7 @@
     <form action="?command=question" method="post">
     <!-- nav bar -->
     <nav class="nav-custom">
-        <a href="index.html">Home</a>
+        <a href="?command=chess">Home</a>
         <a href="search.html">Search</a>
         <a href="?command=add">Add</a>
         <a href="?command=delete">Delete</a>
