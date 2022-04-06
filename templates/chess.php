@@ -45,13 +45,13 @@
         <!-- grid container -->
             <div class="sect grid">
                 <div class="container grid-item">
-                 <img src="Chess.jpeg" alt="" width="400" height="400">
+                 <img src="templates/Chess.jpeg" alt="" width="400" height="400">
                 </div>
                 <div class="container grid-item">
-                 <img src="chess2.png" alt="" width="400" height="400">
+                 <img src="templates/chess2.png" alt="" width="400" height="400">
                 </div>
             <div class="container grid-item">
-                <img src="chess3.jpg" alt="" width="400" height="400">
+                <img src="templates/chess3.jpg" alt="" width="400" height="400">
             </div>
             
             </div>
