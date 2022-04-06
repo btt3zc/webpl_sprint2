@@ -31,6 +31,9 @@ class ChessController {
             case "add": 
                 $this->add(); 
                 break; 
+            case "delete":
+                $this->delete();
+                break; 
         }
     }
 
@@ -265,6 +268,19 @@ private function login() {
                 $error_msg = "Game_ID must be set";
             } 
             include("templates/add.php");
+    }
+
+    public function delete(){
+        if (isset($_POST["delete"])) {
+           $delete = $_POST["delete"]; 
+
+           $query = "Delete from chess_games WHERE id ='$delete'"; 
+           $delete =  $this->db->query($query); 
+           header("Location: ?command=delete");
+        } else {
+            $error_msg = "must enter game_ID ";
+        }
+        include("templates/delete.php");
     }
 
 

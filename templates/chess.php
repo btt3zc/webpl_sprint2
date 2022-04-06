@@ -19,7 +19,7 @@
         <a href="index.html">Home</a>
         <a href="search.html">Search</a>
         <a href="?command=add">Add</a>
-        <a href="delete.html">Delete</a>
+        <a href="?command=delete">Delete</a>
         <a href="mygames.html">My Games</a>
         <a href="?command=logout" class="btn btn-danger"  position:absolute; top:0; right:0; >logout</a>
     </nav>
@@ -35,7 +35,7 @@
             <a href="?command=add" class="list-group-item list-group-item-secondary">Add Game </a>
         </div>
         <div class="column" >
-            <a href="delete.html" class="list-group-item list-group-item-danger">Delete Game </a>
+            <a href="?command=delete" class="list-group-item list-group-item-danger">Delete Game </a>
         </div>
         <div class="column" >
             <a href="mygames.html" class="list-group-item list-group-item-warning">My Games</a>
