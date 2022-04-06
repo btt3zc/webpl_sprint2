@@ -92,6 +92,8 @@ private function login() {
                 header("Location: ?command=chess");
             }
         }
+    } else {
+        $error_msg = "invalid email"; 
     }
     include("templates/login.php");
 }

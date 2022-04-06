@@ -23,15 +23,11 @@
         <a href="?command=add">Add</a>
         <a href="delete.html">Delete</a>
         <a href="mygames.html">My Games</a>
+        <a href="?command=logout" class="btn btn-danger"  position:absolute; top:0; right:0; >logout</a>
     </nav>
      <!-- inline css rule  -->
-     
-    <img src="login.jpeg" alt="login" style = "position: absolute;
-    right: 0;
-    top: 0;
-    display: block;
-    height: 60px;
-    width: 60px;">
+
+    
 
     <!-- menu to other pages  -->
     <div>
