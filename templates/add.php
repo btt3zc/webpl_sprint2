@@ -105,7 +105,7 @@
 			</select> 
 			<label for="rated">Rated</label><br> 
 			<br>
-			<button type="submit" class="btn btn-primary">Submit</button>
+			<button type="submit" class="btn btn-primary" onclick=" return check()" >Submit</button>
 		
 
     </div>
@@ -114,4 +114,18 @@
 
 </body>
 </form>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script>
+		function check() {
+			answer = document.getElementById("Number_of_Turns")
+			if(isNaN(answer) ) {
+				alert("enter in a Number")
+				return false 
+
+			} else {
+				return true 
+			}
+		}
+
+    </script>
 </html>
