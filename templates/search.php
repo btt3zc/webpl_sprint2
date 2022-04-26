@@ -25,7 +25,7 @@
     </nav>
 	<!-- inline css rule to change text alignment and flex -->
     <div class="column" style="flex: 35%; text-align: left;">
-
+        yo
     </div>
 
 
