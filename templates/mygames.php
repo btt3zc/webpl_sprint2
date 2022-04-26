@@ -17,7 +17,7 @@
 <!-- nav -->
     <nav>
         <a href="?command=chess">Home</a>
-		<a href="search.html">Search</a>
+		<a href="?command=search">Search</a>
         <a href="?command=add">Add</a>
         <a href="?command=delete">Delete</a>
         <a href="?command=mygames">My Games</a>

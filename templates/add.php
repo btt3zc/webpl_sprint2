@@ -14,7 +14,7 @@
     <form action="?command=add" method="post">
 	<nav>
         <a href="?command=chess">Home</a>
-		<a href="search.html">Search</a>
+		<a href="?command=search">Search</a>
         <a href="?command=add">Add</a>
         <a href="?command=delete">Delete</a>
         <a href="?command=mygames">My Games</a>
@@ -117,7 +117,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <script>
 		function check() {
-			var x= document.getElementById("Number_of_Turns").value
+			var x = document.getElementById("Number_of_Turns").value
     		if (isNaN(x)) {
         		alert("Must input numbers");
        			return false;

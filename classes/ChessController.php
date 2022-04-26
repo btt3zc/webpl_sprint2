@@ -30,7 +30,10 @@ class ChessController {
                 break;
             case "mygames": 
                 $this->mygames(); 
-                break;  
+                break; 
+            case "search":
+                $this->search(); 
+                break;
         }
     }
 
@@ -158,6 +161,10 @@ private function login() {
         $query_json = json_encode($games);
         $_SESSION["mygames"] = $this->db->query($query);
         include("templates/mygames.php");
+    }
+
+    public function search(){
+        include("templates/search.php");
     }
 
     public function validateEmail($email, $input_regex =  "/.*/") {
