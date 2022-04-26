@@ -40,8 +40,6 @@ class ChessController {
     }
 
     // Display the login page (and handle login logic)
-
-
 private function login() {
     $this->db->query("
         CREATE TABLE IF NOT EXISTS user(
@@ -103,7 +101,7 @@ private function login() {
 
     }
 
-
+    //business logic for add 
     public function add(){
         $this->db->query("
         CREATE TABLE IF NOT EXISTS chess_games(
@@ -139,7 +137,7 @@ private function login() {
             } 
             include("templates/add.php");
     }
-
+    //logic for delete 
     public function delete(){
         if (isset($_POST["delete"])) {
            $delete = $_POST["delete"]; 
