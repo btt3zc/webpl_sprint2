@@ -13,7 +13,7 @@
 
 
 
-<body class="bg-light" style="color: #073b4c !important">
+<body class="bg-light" style=" onload color: #073b4c !important">
 <!-- nav -->
     <nav>
         <a href="?command=chess">Home</a>
