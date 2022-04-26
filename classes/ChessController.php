@@ -165,6 +165,12 @@ private function login() {
 
     public function search(){
         include("templates/search.php");
+        $this->searchQ(); 
+    }
+
+    public function searchQ(){ 
+     #   $jqueryVariable = $_POST['variable'];
+      #  echo $jqueryVariable;
     }
 
     public function validateEmail($email, $input_regex =  "/.*/") {

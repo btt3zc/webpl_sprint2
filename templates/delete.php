@@ -18,7 +18,7 @@
 <form action="?command=delete" method="post">
     <nav>
         <a href="?command=chess">Home</a>
-		<a href="search.html">Search</a>
+		<a href="?command=search">Search</a>
         <a href="?command=add">Add</a>
         <a href="?command=delete">Delete</a>
         <a href="?command=mygames">My Games</a>
@@ -30,7 +30,7 @@
             <input type="text" id="delete" name="delete">
             <label for="delete"> Which game do you want to delete? </label><br>
         </div>
-        <button type="submit" class="btn btn-primary">Delete</button>
+        <button type="submit" class="btn btn-primary" id="smit">Delete</button>
 
        
 
@@ -40,4 +40,30 @@
 
 </body>
 </form>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script>
+		function create() {
+            const newDiv = document.createElement("div");
+            const currentDiv = document.getElementById("div1");
+			var textfield = document.createElement("input");
+            textfield.type = "text";
+            textfield.id = "searchbar";
+            textfield.name = "searchbar";
+            newDiv.appendChild(textfield);
+            div1.append(newDiv);
+		}   
+
+        function send() {
+            if( document.getElementById('smit').value === '') {
+                alert("can't delete empty field ")
+            } else {
+                alert("Game has been deleted"); 
+            }
+        }
+        document.getElementById('smit').addEventListener('click',function (){
+            send()
+        });
+
+    </script>
+    
 </html>

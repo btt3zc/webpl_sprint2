@@ -37,12 +37,25 @@
                     </div>
 
                     <div class="text-center">                
-                    <button type="submit" class="btn btn-primary">Login</button>
+                    <button type="submit" class="btn btn-primary" onclick = "return check()">Login</button>
                     </div>
                 </form>
                 </div>
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <script>
+            
+            
+            function check() {
+                var x = document.getElementById("name").value
+                if (!isNaN(x)) {
+                    alert("Must input a string that represents a name");
+                       return false;
+                }
+            }
+            
+    
+        </script>
     </body>
 </html>
