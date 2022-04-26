@@ -10,11 +10,9 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 	<link rel="icon" type="image/x-icon" href="index.html"/>
 </head>
-
-
-
-<body class="bg-light" style=" onload = "create()" color: #073b4c !important">
-<!-- nav -->
+<body onload = "create()" class="bg-light" style=" color: #073b4c !important">
+    <form action="?command=search" method="post" id="form1">
+    <!-- nav -->
     <nav>
         <a href="?command=chess">Home</a>
 		<a href="?command=search">Search</a>
@@ -24,23 +22,21 @@
         <a href="?command=logout" class="btn btn-danger"  position:absolute; top:0; right:0; >logout</a>
     </nav>
 	<!-- inline css rule to change text alignment and flex -->
-    <div class="column" style="flex: 35%; text-align: left;">
-        yo
+    <div  id="div1" class="column" style="flex: 35%; text-align: left;">
     </div>
-
-
 </body>
-
+</form>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <script>
 		function create() {
-
-			var input = document.createElement('input');
-            input.setAttribute('type', 'text');
-            document.getElementById('parent').appendChild(input);
-
+            const newDiv = document.createElement("div");
+            const currentDiv = document.getElementById("form1");
+			var textfield = document.createElement("input");
+            textfield.type = "text";
+            textfield.id = "searchbar";
+            textfield.name = "searchbar";
+            newDiv.appendChild(textfield);
+            document.body.appendChild(newDiv);
 		}   
-
     </script>
-
 </html>
