@@ -116,9 +116,26 @@
 </form>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <script>
+
+		var Game = function(name,number_of_Turns) {
+			this.name = name;
+			this.number_of_Turns = number_of_Turns
+		  };
+		Game.prototype.check = function() {
+			if (isNaN(this.number_of_Turns)) {
+        		alert("Must input numbers");
+       			return false;
+    		}
+		  };
 		function check() {
-			var x = document.getElementById("Number_of_Turns").value
-    		if (isNaN(x)) {
+			name = document.getElementById("gameID").value
+			number_of_Turns = document.getElementById(Number_of_Turns).value
+			var games = new Game(name,number_of_Turns)
+			checks(games); 
+		}
+
+		function checks(Game) {
+			if (isNaN(Game.number_of_Turns)) {
         		alert("Must input numbers");
        			return false;
     		}
