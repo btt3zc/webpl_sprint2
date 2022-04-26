@@ -29,7 +29,7 @@
 
     <!-- menu to other pages  -->
     <div>
-        <a href="?command=search" class="list-group-item list-group-item-primary">Search Games </a>
+        <a href="search.html" class="list-group-item list-group-item-primary">Search Games </a>
            
         <div class="column" >
             <a href="?command=add" class="list-group-item list-group-item-secondary">Add Game </a>
@@ -38,21 +38,21 @@
             <a href="?command=delete" class="list-group-item list-group-item-danger">Delete Game </a>
         </div>
         <div class="column" >
-            <a href="?command=mygames" class="list-group-item list-group-item-warning">My Games</a>
+            <a href="mygames.html" class="list-group-item list-group-item-warning">My Games</a>
         </div>
     
         <br>
         <!-- grid container -->
-            <div class="sect grid">
+            <div id="imggrid" class="sect grid" onresize="imgresize()">
                 <div class="container grid-item">
-                 <img src="templates/Chess.jpeg" alt="" width="400" height="400">
+                 <img id="img1" src="templates/Chess.jpeg" alt="" width="400" height="400">
                 </div>
                 <div class="container grid-item">
-                 <img src="templates/chess2.png" alt="" width="400" height="400">
+                 <img id="img2" src="templates/chess2.png" alt="" width="400" height="400">
                 </div>
-            <div class="container grid-item">
-                <img src="templates/chess3.jpg" alt="" width="400" height="400">
-            </div>
+                <div class="container grid-item">
+                    <img id="img3" src="templates/chess3.jpg" alt="" width="400" height="400">
+                </div>
             
             </div>
         <!-- footer  -->
@@ -68,5 +68,18 @@
         
     </footer>
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script>
+		function imgresize() {
+            var w = window.outerWidth;
+            var h = window.outerHeight;
+            if (w<1400){
+                document.getElementById("img1").width = 300;
+                document.getElementById("img2").width = 300;
+                document.getElementById("img3").width = 300;
+            }
+		}   
+    </script>
 </form>
 </html>
