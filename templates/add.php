@@ -30,7 +30,7 @@
 			</div>
 
 			<div>
-				<input type="text" id= "j" name="time_increment">
+				<input type="text" id= "time_increment" name="time_increment">
 				<label for="time_increment">Time Increment</label><br>
 			</div>
 
@@ -106,6 +106,7 @@
 			<label for="rated">Rated</label><br> 
 			<br>
 			<button type="submit" class="btn btn-primary" onclick=" return check()" >Submit</button>
+			<button type="button" class="btn btn-primary" onclick="resetform()" >Reset</button>
 		
 
     </div>
@@ -122,6 +123,21 @@
         		alert("Must input numbers");
        			return false;
     		}
+		}
+
+		function resetform() {
+			document.getElementById("gameID").value = "";
+			document.getElementById("time_increment").value = "";
+			document.getElementById("opening_name").value = "";
+			document.getElementById("opening_eco").value = "";
+			document.getElementById("black_ID").value = "";
+			document.getElementById("black_rating").value = "";
+			document.getElementById("white_ID").value = "";
+			document.getElementById("white_rating").value = "";
+			document.getElementById("move_list").value = "";
+			document.getElementById("Number_of_Turns").value = "";
+			document.getElementById("StartTime").value = "";
+			document.getElementById("EndTime").value = "";
 		}
 
     </script>
