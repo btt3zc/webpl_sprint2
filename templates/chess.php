@@ -29,7 +29,7 @@
 
     <!-- menu to other pages  -->
     <div>
-        <a href="search.html" class="list-group-item list-group-item-primary">Search Games </a>
+        <a href="?command=search" class="list-group-item list-group-item-primary">Search Games </a>
            
         <div class="column" >
             <a href="?command=add" class="list-group-item list-group-item-secondary">Add Game </a>
@@ -38,7 +38,7 @@
             <a href="?command=delete" class="list-group-item list-group-item-danger">Delete Game </a>
         </div>
         <div class="column" >
-            <a href="mygames.html" class="list-group-item list-group-item-warning">My Games</a>
+            <a href="?command=mygames" class="list-group-item list-group-item-warning">My Games</a>
         </div>
     
         <br>
