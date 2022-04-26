@@ -13,7 +13,8 @@
 
 
 
-<body class="bg-light" style=" onload = "create()" color: #073b4c !important">
+<body class="bg-light" style=" color: #073b4c !important">
+    <form action="?command=search" onload = "create()" method="post">
 <!-- nav -->
     <nav>
         <a href="?command=chess">Home</a>
@@ -24,21 +25,23 @@
         <a href="?command=logout" class="btn btn-danger"  position:absolute; top:0; right:0; >logout</a>
     </nav>
 	<!-- inline css rule to change text alignment and flex -->
-    <div class="column" style="flex: 35%; text-align: left;">
+    <div  id="div1" class="column" style="flex: 35%; text-align: left;">
 
     </div>
 
 
 </body>
-
+</form>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <script>
 		function create() {
-
-			var input = document.createElement('input');
-            input.setAttribute('type', 'text');
-            document.getElementById('parent').appendChild(input);
-
+            const newDiv = document.createElement("div");
+            const currentDiv = document.getElementById("div1");
+			var textfield = document.createElement("input");
+            textfield.type = "text";
+            textfield.value = "";
+            newDiv.appendChild(textfield);
+            document.body.insertBefore(newDiv, currentDiv);
 		}   
 
     </script>
