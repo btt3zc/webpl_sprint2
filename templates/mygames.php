@@ -13,7 +13,7 @@
 
 
 
-<body class="bg-light" style=" onload color: #073b4c !important">
+<body class="bg-light" style=" onload color: #073b4c !important" onresize=recolor()>
 <!-- nav -->
     <nav>
         <a href="?command=chess">Home</a>
@@ -24,7 +24,7 @@
         <a href="?command=logout" class="btn btn-danger"  position:absolute; top:0; right:0; >logout</a>
     </nav>
 	<!-- inline css rule to change text alignment and flex -->
-    <div class="column" style="flex: 35%; text-align: left;">
+    <div id="tableid"class="column" style="background-color:white;">
 
             <?php
 
@@ -88,7 +88,20 @@
 
     </div>
 
-
-
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script>
+        {% comment %} anonymous function {% endcomment %}
+		var recolor = function() {
+            var w = window.outerWidth;
+            var h = window.outerHeight;
+            if (w<1400){
+               document.getElementById("tableid").style="background-color:powderblue;";
+            }
+            if (w>1400){
+                document.getElementById("tableid").style="background-color:white;";
+            }
+		}
+        
+    </script>
 </html>
