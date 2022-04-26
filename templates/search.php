@@ -24,7 +24,7 @@
 	<!-- inline css rule to change text alignment and flex -->
     <div  id="div1" class="column" style="flex: 35%; text-align: left;">
     </div>
-    <button type="submit" class="btn btn-primary" onclick=" return check()" >Submit</button>
+    <button type="submit" class="btn btn-primary"   >Submit</button>
 </body>
 </form>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
@@ -39,5 +39,11 @@
             newDiv.appendChild(textfield);
             div1.append(newDiv);
 		}   
+
+        
+        
+        
+
     </script>
+
 </html>
