@@ -43,16 +43,16 @@
     
         <br>
         <!-- grid container -->
-            <div class="sect grid">
+            <div id="imggrid" class="sect grid" onresize="imgresize()">
                 <div class="container grid-item">
-                 <img src="templates/Chess.jpeg" alt="" width="400" height="400">
+                 <img id="img1" src="templates/Chess.jpeg" alt="" width="400" height="400">
                 </div>
                 <div class="container grid-item">
-                 <img src="templates/chess2.png" alt="" width="400" height="400">
+                 <img id="img2" src="templates/chess2.png" alt="" width="400" height="400">
                 </div>
-            <div class="container grid-item">
-                <img src="templates/chess3.jpg" alt="" width="400" height="400">
-            </div>
+                <div class="container grid-item">
+                    <img id="img3" src="templates/chess3.jpg" alt="" width="400" height="400">
+                </div>
             
             </div>
         <!-- footer  -->
@@ -68,5 +68,18 @@
         
     </footer>
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script>
+		function imgresize() {
+            var w = window.outerWidth;
+            var h = window.outerHeight;
+            if (w<1400){
+                document.getElementById("img1").width = 300;
+                document.getElementById("img2").width = 300;
+                document.getElementById("img3").width = 300;
+            }
+		}   
+    </script>
 </form>
 </html>
