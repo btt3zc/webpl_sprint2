@@ -157,6 +157,7 @@ private function login() {
         $name = $_SESSION["name"]; 
         $query = "select * from chess_games where black_id ='$name' OR white_id = '$name' ";
         $games =  $this->db->query($query); 
+        $query_json = json_encode($games);
         $_SESSION["mygames"] = $this->db->query($query);
         include("templates/mygames.php");
     }
