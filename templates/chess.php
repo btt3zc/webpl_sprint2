@@ -12,11 +12,11 @@
     rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" 
     crossorigin="anonymous">
 </head>
-<body class="bg-light" >
+<body class="bg-light" onresize="imgresize()">
     <form action="?command=question" method="post">
     <!-- nav bar -->
     <nav class="nav-custom">
-        <a href="?command=chess">Home</a>
+        <a href="?command=chess" >Home</a>
         <a href="?command=search">Search</a>
         <a href="?command=add">Add</a>
         <a href="?command=delete">Delete</a>
@@ -76,8 +76,23 @@
             var h = window.outerHeight;
             if (w<1400){
                 document.getElementById("img1").width = 300;
+                document.getElementById("img1").height = 300;
+
                 document.getElementById("img2").width = 300;
+                document.getElementById("img2").height = 300;
+
                 document.getElementById("img3").width = 300;
+                document.getElementById("img3").height = 300;
+            }
+            if (w>1400){
+                document.getElementById("img1").width = 400;
+                document.getElementById("img1").height = 400;
+
+                document.getElementById("img2").width = 400;
+                document.getElementById("img2").height = 400;
+
+                document.getElementById("img3").width = 400;
+                document.getElementById("img3").height = 400;
             }
 		}   
     </script>
