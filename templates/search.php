@@ -24,19 +24,20 @@
 	<!-- inline css rule to change text alignment and flex -->
     <div  id="div1" class="column" style="flex: 35%; text-align: left;">
     </div>
+    <button type="submit" class="btn btn-primary" onclick=" return check()" >Submit</button>
 </body>
 </form>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <script>
 		function create() {
             const newDiv = document.createElement("div");
-            const currentDiv = document.getElementById("form1");
+            const currentDiv = document.getElementById("div1");
 			var textfield = document.createElement("input");
             textfield.type = "text";
             textfield.id = "searchbar";
             textfield.name = "searchbar";
             newDiv.appendChild(textfield);
-            document.body.appendChild(newDiv);
+            div1.append(newDiv);
 		}   
     </script>
 </html>
