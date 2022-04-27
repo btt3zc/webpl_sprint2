@@ -88,10 +88,21 @@
 
     </div>
 
-    <div id="jsondiv">
-        
-    </div>
-
+    <div id="jsondiv1"></div>
+    <div id="jsondiv2"></div>
+    <div id="jsondiv3"></div>
+    <div id="jsondiv4"></div>
+    <div id="jsondiv5"></div>
+    <div id="jsondiv6"></div>
+    <div id="jsondiv7"></div>
+    <div id="jsondiv8"></div>
+    <div id="jsondiv9"></div>
+    <div id="jsondiv10"></div>
+    <div id="jsondiv11"></div>
+    <div id="jsondiv12"></div>
+    <div id="jsondiv13"></div>
+    <div id="jsondiv14"></div>
+    <div id="jsondiv15"></div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <script>
@@ -117,22 +128,22 @@
             ajax.addEventListener("load", function() {
                 if (this.status == 200) { // worked 
                     games = this.response;
-                    game1 = game[0];
-                    document.getElementById("jsondiv").innerHTML+=game1["id"];
-                    document.getElementById("jsondiv").innerHTML+=game1["Time_increment"];
-                    document.getElementById("jsondiv").innerHTML+=game1["opening_name"];
-                    document.getElementById("jsondiv").innerHTML+=game1["opening_eco"];
-                    document.getElementById("jsondiv").innerHTML+=game1["black_id"];
-                    document.getElementById("jsondiv").innerHTML+=game1["black_rating"];
-                    document.getElementById("jsondiv").innerHTML+=game1["white_id"];
-                    document.getElementById("jsondiv").innerHTML+=game1["white_rating"];
-                    document.getElementById("jsondiv").innerHTML+=game1["move_list"];
-                    document.getElementById("jsondiv").innerHTML+=game1["turn_number"];
-                    document.getElementById("jsondiv").innerHTML+=game1["start_time"];
-                    document.getElementById("jsondiv").innerHTML+=game1["end_time"];
-                    document.getElementById("jsondiv").innerHTML+=game1["winner"];
-                    document.getElementById("jsondiv").innerHTML+=game1["victory_status"];
-                    document.getElementById("jsondiv").innerHTML+=game1["rated"];
+                    game1 = games[0];
+                    document.getElementById("jsondiv1").innerHTML=game1["id"];
+                    document.getElementById("jsondiv2").innerHTML=game1["Time_increment"];
+                    document.getElementById("jsondiv3").innerHTML=game1["opening_name"];
+                    document.getElementById("jsondiv4").innerHTML=game1["opening_eco"];
+                    document.getElementById("jsondiv5").innerHTML=game1["black_id"];
+                    document.getElementById("jsondiv6").innerHTML=game1["black_rating"];
+                    document.getElementById("jsondiv7").innerHTML=game1["white_id"];
+                    document.getElementById("jsondiv8").innerHTML=game1["white_rating"];
+                    document.getElementById("jsondiv9").innerHTML=game1["move_list"];
+                    document.getElementById("jsondiv10").innerHTML=game1["turn_number"];
+                    document.getElementById("jsondiv11").innerHTML=game1["start_time"];
+                    document.getElementById("jsondiv12").innerHTML=game1["end_time"];
+                    document.getElementById("jsondiv13").innerHTML=game1["winner"];
+                    document.getElementById("jsondiv14").innerHTML=game1["victory_status"];
+                    document.getElementById("jsondiv15").innerHTML=game1["rated"];
                 }
             });
 
