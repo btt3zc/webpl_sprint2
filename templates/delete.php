@@ -54,8 +54,8 @@
 		}   
 
         function send() {
-            if( document.getElementById('smit').value === '') {
-                alert("can't delete empty field ")
+            if( document.getElementById('delete').value === '') {
+                alert("can't delete empty field ");
             } else {
                 alert("Game has been deleted"); 
             }

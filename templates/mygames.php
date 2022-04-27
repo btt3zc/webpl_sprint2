@@ -120,8 +120,8 @@
         
         var games=null;
         function mygames(){
-            var req = new XMLHttpRequest();
-            req.open("Get", "?command=mygames", true);
+            var ajax = new XMLHttpRequest();
+            ajax.open("Get", "?command=mygames", true);
             ajax.responseType = "json";
             ajax.send(null);
 

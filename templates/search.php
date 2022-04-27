@@ -39,11 +39,6 @@
             newDiv.appendChild(textfield);
             div1.append(newDiv);
 		}   
-
-        
-        
-        
-
     </script>
 
 </html>
