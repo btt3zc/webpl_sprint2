@@ -117,44 +117,43 @@
 </form>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <script>
-
-		var Game = function(name,number_of_Turns) {
-			this.name = name;
-			this.number_of_Turns = number_of_Turns
-		  };
-		Game.prototype.check = function() {
-			if (isNaN(this.number_of_Turns)) {
-        		alert("Must input numbers");
-       			return false;
-    		}
-		  };
 		function check() {
-			name = document.getElementById("gameID").value
-			number_of_Turns = document.getElementById(Number_of_Turns).value
-			var games = new Game(name,number_of_Turns)
-			checks(games); 
-		}
-
-		function checks(Game) {
-			if (isNaN(Game.number_of_Turns)) {
+			var x = document.getElementById("Number_of_Turns").value
+    		if (isNaN(x)) {
         		alert("Must input numbers");
        			return false;
     		}
 		}
+
+		function Game() {
+			this.name = "";
+			this.time_increment = "";
+			this.opening_name = "";
+			this.opening_eco = "";
+			this.black_ID = "";
+			this.black_rating = "";
+			this.white_ID = "";
+			this.white_rating = "";
+			this.move_list = "";
+			this.number_of_Turns = "";
+			this.StartTime = "";
+			this.EndTime = "";
+		};
 
 		function resetform() {
-			document.getElementById("gameID").value = "";
-			document.getElementById("time_increment").value = "";
-			document.getElementById("opening_name").value = "";
-			document.getElementById("opening_eco").value = "";
-			document.getElementById("black_ID").value = "";
-			document.getElementById("black_rating").value = "";
-			document.getElementById("white_ID").value = "";
-			document.getElementById("white_rating").value = "";
-			document.getElementById("move_list").value = "";
-			document.getElementById("Number_of_Turns").value = "";
-			document.getElementById("StartTime").value = "";
-			document.getElementById("EndTime").value = "";
+			const game = new Game();
+			document.getElementById("gameID").value = game.name;
+			document.getElementById("time_increment").value = game.time_increment;
+			document.getElementById("opening_name").value = game.opening_name;
+			document.getElementById("opening_eco").value = game.opening_eco;
+			document.getElementById("black_ID").value = game.black_ID;
+			document.getElementById("black_rating").value = game.black_rating;
+			document.getElementById("white_ID").value = game.white_ID;
+			document.getElementById("white_rating").value = game.white_rating;
+			document.getElementById("move_list").value = game.move_list;
+			document.getElementById("Number_of_Turns").value = game.number_of_Turns;
+			document.getElementById("StartTime").value = game.StartTime;
+			document.getElementById("EndTime").value = game.EndTime;
 		}
 
     </script>
