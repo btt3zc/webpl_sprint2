@@ -163,6 +163,15 @@ private function login() {
         include("templates/mygames.php");
     }
 
+    public function mygames2(){
+        $name = $_SESSION["name"]; 
+        $query = "select * from chess_games where black_id ='$name' OR white_id = '$name' ";
+        $games =  $this->db->query($query); 
+        $query_json = json_encode($games);
+        header("Content-type: application/json");
+        echo json_encode($query_json, JSON_PRETTY_PRINT);
+    }
+
     public function search(){
         include("templates/search.php");
         $this->searchQ(); 

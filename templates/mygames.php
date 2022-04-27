@@ -88,6 +88,10 @@
 
     </div>
 
+    <div id="jsondiv">
+        
+    </div>
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <script>
@@ -102,6 +106,44 @@
                 document.getElementById("tableid").style="background-color:white;";
             }
 		}
+        
+        var games=null;
+        function mygames(){
+            var req = new XMLHttpRequest();
+            req.open("Get", "?command=mygames", true);
+            ajax.responseType = "json";
+            ajax.send(null);
+
+            ajax.addEventListener("load", function() {
+                if (this.status == 200) { // worked 
+                    games = this.response;
+                    game1 = game[0];
+                    document.getElementById("jsondiv").innerHTML+=game1["id"];
+                    document.getElementById("jsondiv").innerHTML+=game1["Time_increment"];
+                    document.getElementById("jsondiv").innerHTML+=game1["opening_name"];
+                    document.getElementById("jsondiv").innerHTML+=game1["opening_eco"];
+                    document.getElementById("jsondiv").innerHTML+=game1["black_id"];
+                    document.getElementById("jsondiv").innerHTML+=game1["black_rating"];
+                    document.getElementById("jsondiv").innerHTML+=game1["white_id"];
+                    document.getElementById("jsondiv").innerHTML+=game1["white_rating"];
+                    document.getElementById("jsondiv").innerHTML+=game1["move_list"];
+                    document.getElementById("jsondiv").innerHTML+=game1["turn_number"];
+                    document.getElementById("jsondiv").innerHTML+=game1["start_time"];
+                    document.getElementById("jsondiv").innerHTML+=game1["end_time"];
+                    document.getElementById("jsondiv").innerHTML+=game1["winner"];
+                    document.getElementById("jsondiv").innerHTML+=game1["victory_status"];
+                    document.getElementById("jsondiv").innerHTML+=game1["rated"];
+                }
+            });
+
+            // What happens on error
+            ajax.addEventListener("error", function() {
+                document.getElementById("message").innerHTML = 
+                    "<div class='alert alert-danger'>An Error Occurred</div>";
+            });
+        }
+
+        mygames();
         
     </script>
 </html>
